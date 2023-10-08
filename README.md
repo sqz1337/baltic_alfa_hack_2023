@@ -15,7 +15,23 @@
    source myenv/bin/activate
    pip install -r requirements.txt
 
-Проект имеет следующюю струткру 
+2. Откройте терминал в папке со скриптами и введите следующее:
+
+   ```bash
+   python train_model.py # Запускает обучение модели на данных (path/data/input/train..)
+   python predict_data.py # Предсказывание моделью (path/models) значений на данных (path/data/input/test..)
+
+3. Чтобы проверить нашу модель, необходимо:
+
+   Скачать модель с hugging face:
+   ```bash
+   https://huggingface.co/YourGodAmaterasu/alfahack_model/resolve/main/gluon_model.tar.gz
+   ```
+   Положить архив в (path/models) и запустить скрипт:
+   ```bash
+   python unzip_model.py
+   
+## Проект имеет следующюю струткру 
 - `data/`: Директория, которая содержит входные и выходные данные проекта.
   - `input/`: Директория с входными данными.
     - `test.parquet`: Файл с тестовыми данными в формате Parquet.
